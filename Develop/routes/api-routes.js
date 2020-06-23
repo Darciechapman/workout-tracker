@@ -13,9 +13,9 @@ router.get("/workouts", (req, res) => {
     })
 });
 //PUT / UPDATE add exerise to last workout
-router.put("workouts/:id", (req, res) => {
+router.put("/workouts/:id", (req, res) => {
     db.Workout.update({_id: req.params.id}, {$push: { exercises: req.body}})
-    .then( updateData => {
+    .then(updateData => {
         res.json(updateData);
     })
     .catch(err => {
@@ -24,7 +24,7 @@ router.put("workouts/:id", (req, res) => {
 });
 //POST / CREATE for creating new workouts
 router.post("/workouts", (req, res) => {
-    dbWorkout.create(req.body)
+    db.Workout.create(req.body)
     .then(newWorkout => {
         res.json(newWorkout);
     })
