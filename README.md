@@ -12,3 +12,4 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 ## Heroku Link
 
+https://vast-inlet-01813.herokuapp.com/
